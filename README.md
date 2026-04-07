@@ -1,37 +1,42 @@
 # vis-literacy
 
+Project structure:
+
+    data-visualization-chatbot:
+        Source code for the chatbot-based onboarding prototype.
+
+    data-visualization-scrollytelling:
+        Source code for the scrollytelling-based onboarding prototype.
+
 Steps to install:
 
-    Backend:
+    Chatbot:
 
         1. Install Node.js version v18.15.0 based on operating system.
             https://nodejs.dev/en/learn/how-to-install-nodejs/
-
-        2. npm install express
-        3. npm install cors
-
-    Frontend:
-
-        1. npm install react react-dom
-        2. npm install react-simple-chatbot --save
+        2. cd data-visualization-chatbot
+        3. npm install
 
 How to run the chatbot: 
 
-    Server side: 
-        node backend.js
+    1. cd data-visualization-chatbot
 
-    Client side:    
+    2. Server side:
+        node src/backend.js
+
+    3. Client side:
         npm start
-
 
 
 How to run scrollytelling:
 
-    Start the Server:
+    1. cd data-visualization-scrollytelling
+
+    2. Start the Server:
         python -m http.server
 
-    Start heatmap onboarding:
+    3. Start heatmap onboarding:
         http://localhost:8000/Heatmap-Scrolly/
 
-    Start treemap onboarding:
+    4. Start treemap onboarding:
         http://localhost:8000/Treemap-Scrolly/

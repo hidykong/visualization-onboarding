@@ -7,11 +7,13 @@ const fs = require('fs')
 // Provide support for JSON parser
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+const dataDirectory = 'DataFiles';
 
 // REST POST to save data
 app.post('/savedata', (req, res) => {
     const data = req.body
-    const filename = 'DataFiles/' + data['name'] + data['age'] + '.json'
+    fs.mkdirSync(dataDirectory, { recursive: true })
+    const filename = dataDirectory + '/' + data['name'] + data['age'] + '.json'
     fs.writeFile(filename, JSON.stringify(data), (err) => {
         if (err) {
         console.error(err)
